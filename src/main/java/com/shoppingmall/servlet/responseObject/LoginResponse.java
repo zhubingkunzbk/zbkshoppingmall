@@ -4,7 +4,8 @@ import com.shoppingmall.common.response.ResponseObject;
 
 public enum LoginResponse implements ResponseObject {
     LOGIN_SUCCESS(0,"登陆成功"),
-    ACCOUNT_NUMBER_OR_PASSWORD_ERROR(1,"账号或密码错");
+    ACCOUNT_NUMBER_OR_PASSWORD_ERROR(1,"账号或密码错"),
+    NO_LOGIN(2,"未登录");
     private int code;
     private String msg;
     LoginResponse(int code, String msg) {

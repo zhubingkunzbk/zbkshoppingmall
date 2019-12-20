@@ -48,4 +48,21 @@ public class UserDaoImpl implements UserDao {
         }
         return res;
     }
+
+    @Override
+    public int updateUser(User user) {
+        String sql = "UPDATE users SET user_name=?,password=?,gender=?,e_mail=?,phone_number=?,is_business=? WHERE account_number=?";
+        try {
+            int res = SqlUtil.update(sql,user.getUserName(),
+                    user.getPassword(),user.getGender(),user.geteMail(),user.getPhoneNumber(),user.getIsBusiness(),user.getAccountNumber());
+            if(res == 1){
+                return 1;
+            }else{
+                return 0;
+            }
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return 0;
+        }
+    }
 }

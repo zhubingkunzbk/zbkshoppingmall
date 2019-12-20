@@ -1,10 +1,19 @@
 package com.shoppingmall.util;
 
+import com.shoppingmall.common.Entry;
 import com.shoppingmall.common.MyAutowired;
 import com.shoppingmall.common.MyRepository;
 import com.shoppingmall.common.MyService;
-import com.shoppingmall.servlet.RegisterServlet;
+import com.shoppingmall.configure.AliPayConf;
+import org.apache.http.HttpHost;
 import org.apache.log4j.Logger;
+import org.elasticsearch.action.bulk.BulkRequestBuilder;
+import org.elasticsearch.client.RestClient;
+import org.elasticsearch.client.RestClientBuilder;
+import org.elasticsearch.client.RestHighLevelClient;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
 
 
 import javax.servlet.Servlet;
@@ -12,6 +21,8 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletRegistration;
 import javax.servlet.annotation.WebServlet;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.*;
 
@@ -69,6 +80,9 @@ public class BeanFactory {
     }
     public void scanClassByBasePackage(String basePackge, ServletContextEvent sce){
         initLogger(sce);
+        initJedis(sce);
+        initElasticSearch();
+        initAliPay();
         File rootPath = new File(basePackge);
         File[] childrenFileList = rootPath.listFiles();
         for(File file:childrenFileList){
@@ -80,6 +94,35 @@ public class BeanFactory {
                     loadClassByPath(file.getAbsolutePath(),sce);
             }
         }
+    }
+
+    private void initElasticSearch() {
+        HttpHost httpHost = HttpHost.create("localhost:9200");
+        RestClientBuilder restClientBuilder = RestClient.builder(httpHost);
+        RestHighLevelClient client = new RestHighLevelClient(restClientBuilder);
+        factoryMap.put(client.getClass().getSimpleName(),client);
+    }
+
+    private void initJedis(ServletContextEvent sce) {
+        JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+        Properties properties = new Properties();
+        try {
+            InputStream is = this.getClass().getClassLoader().getResourceAsStream("jedis.properties");
+            properties.load(is);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        jedisPoolConfig.setMaxTotal(Integer.parseInt(properties.getProperty("maxTotal")));
+        jedisPoolConfig.setMaxIdle(Integer.parseInt(properties.getProperty("maxIdle")));
+        jedisPoolConfig.setTestOnBorrow(true);
+        jedisPoolConfig.setMaxWaitMillis(1500);
+        JedisPool jedisPool = new JedisPool(jedisPoolConfig,"106.54.42.85",6379,2000,"zhubingkun0715..");
+        factoryMap.put(jedisPool.getClass().getSimpleName(),jedisPool);
+    }
+
+    private void initAliPay(){
+        AliPayConf aliPayConf = AliPayConf.getInstance();
+        factoryMap.put(AliPayConf.class.getSimpleName(),aliPayConf);
     }
 
     private void initLogger(ServletContextEvent sce) {
@@ -131,6 +174,17 @@ public class BeanFactory {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    public void destroyed(ServletContextEvent sce) {
+        for(Map.Entry<String, Object> entry:factoryMap.entrySet()){
+            Object obj = entry.getValue();
+            if(obj instanceof AutoCloseable){
+                System.out.println(obj.toString());
+                AutoCloseable closeable = (AutoCloseable) obj;
+                CommonUtils.close(closeable);
             }
         }
     }

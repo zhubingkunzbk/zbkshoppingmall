@@ -1,0 +1,120 @@
+.core-div{
+    border-top: 30px solid #2BACA9;
+    padding-top: 30px;
+}
+.core-div > .center{
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.core-div > .center > ul > li:not(:first-child){
+    height: 100px;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px dotted #999;
+
+}
+.core-div > .center > ul > li img{
+    max-height: 100px;
+    max-width: 100px;
+}
+.core-div > .center > ul > li > div:first-child{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.core-div > .center > ul > li > div:not(:first-child){
+    float: left;
+    width: 400px;
+    height: 100px;
+    margin-left: 20px;
+}
+.core-div > .center > ul > li > div:nth-child(2) a{
+    display: block;
+    white-space: pre-wrap;
+    text-align: left;
+}
+.core-div > .center > ul > li > div:nth-child(2) p{
+    margin-top: 10px;
+    color: #999;
+    text-align: left;
+}
+.core-div > .center > ul > li > div:nth-child(3){
+    margin-top: 40px;
+    height: 60px;
+    width: 350px;
+}
+.core-div > .center > ul > li > div:nth-child(3) > *{
+    height: 20px;
+    float: left;
+    vertical-align: top;
+    display: inline;
+    margin: 0 2px 0 2px;
+}
+.core-div > .center > ul > li > div:nth-child(3) > span{
+    height: 22px;
+    line-height: 22px;
+    margin: 0 10px 0 10px;
+    color: #999;
+}
+.core-div > .center > ul > li > div > input[type="text"]{
+    width: 100px;
+    border-radius: 10%;
+    border: 1px solid #ccc;
+
+}
+.core-div > .center > ul > li > div > input[type="button"] {
+    width: 20px;
+    border-radius: 20%;
+    border: 1px solid #ccc;
+    line-height: 20px;
+
+}
+.core-div > .center > ul > li > div:nth-child(4),.core-div > .center > ul > li > div:nth-child(5){
+    width: 100px;
+    margin: 0px 25px 0px 25px;
+}
+.core-div > .center > ul > li > div:nth-child(4) > p{
+    height: 100px;
+    line-height: 100px;
+    margin: 0px;
+    color: #2BACA9;
+    font-size: 20px;
+}
+.core-div > .center > ul > li > div:nth-child(4) > p > span{
+    color: #999;
+}
+.core-div > .center > ul > li > div:nth-child(5) > button{
+    margin-top: 36px;
+    width: 100px;
+}
+.core-div > .center > ul > li:first-child{
+    background: linear-gradient(to right, #69DAD7 , #2BACA9);
+}
+.core-div > .center > ul >:first-child,.core-div > .center > ul >:first-child > div{
+    height: 30px !important;
+    margin: 0px !important;
+    line-height: 30px;
+}
+.core-div > .center:nth-child(2){
+    margin-top: 30px;
+    height: 50px;
+}
+.core-div > .center:nth-child(2) > div{
+    float: right;
+    height: 50px;
+}
+.core-div > .center:nth-child(2) > div > input{
+    height: 48px;
+    width: 200px;
+    background-color: #ccc;
+    border: 1px solid #2BACA9;
+    margin-left: 30px;
+}
+.core-div > .center:nth-child(2) > div > p{
+    height: 48px;
+    line-height: 48px;
+    color: #2BACA9;
+    font-size: 30px;
+}
+.core-div > .center:nth-child(2) > div > p > span{
+    color: #999;
+}

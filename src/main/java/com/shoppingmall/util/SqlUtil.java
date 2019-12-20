@@ -78,7 +78,12 @@ public class SqlUtil {
             for (Field field : fields) {
                 String name = field.getName();
                 name = transformationFieldName(name);
-                Object fieldValue = rs.getObject(name);
+                Object fieldValue;
+                try {
+                    fieldValue = rs.getObject(name);
+                }catch (SQLException e){
+                    fieldValue = null;
+                }
                 field.setAccessible(true);
                 field.set(obj, fieldValue);
             }
@@ -89,48 +94,5 @@ public class SqlUtil {
         }
         return list;
     }
-//    private static void handleArgsType(PreparedStatement pstmt, int i, Object obj) throws SQLException {
-//        pstmt.setObject(i,obj);
-//        if(obj instanceof String){
-//            pstmt.setString(i,(String)obj);
-//            return;
-//        }
-//        if(obj instanceof Boolean){
-//            pstmt.setBoolean(i,(Boolean)obj);
-//            return;
-//        }
-//        if(obj instanceof Byte){
-//            pstmt.setByte(i,(Byte)obj);
-//            return;
-//        }
-//        if(obj instanceof Short){
-//            pstmt.setShort(i,(Short)obj);
-//            return;
-//        }
-//        if(obj instanceof Integer){
-//            pstmt.setInt(i,(Integer)obj);
-//            return;
-//        }
-//        if(obj instanceof Long){
-//            pstmt.setLong(i,(Long)obj);
-//            return;
-//        }
-//        if(obj instanceof Float){
-//            pstmt.setFloat(i,(Float)obj);
-//            return;
-//        }
-//        if(obj instanceof Double){
-//            pstmt.setDouble(i,(Double)obj);
-//            return;
-//        }
-//        if(obj instanceof BigDecimal){
-//            pstmt.setBigDecimal(i,(BigDecimal)obj);
-//            return;
-//        }
-//        if(obj instanceof Date){
-//            pstmt.setDate(i,(Date)obj);
-//            return;
-//        }
-//    }
 
 }

@@ -1,0 +1,113 @@
+.top-div > .center > :last-child{
+    height: 160px;
+    width: 50%;
+    line-height: 160px;
+    font-size: 70px;
+    padding-left: 50px;
+    font-family: "Brush Script MT";
+}
+.checked{
+    background-color: #EDEDED;
+}
+.core-div > .center{
+    background-color: #fff;
+    position: relative;
+    border: 1px solid #2BACA9;
+}
+
+.core-div > .center > .left-nav{
+    position: absolute;
+    width: 250px;
+    top: 0px;
+    bottom: 1px;
+    border-right: 1px solid #2BACA9;
+    float: left;
+}
+.core-div > .center > .left-nav > ul >:first-child{
+    background-color: #2BACA9;
+}
+.core-div > .center > .left-nav > ul > li{
+    display: block;
+    width: 100%;
+    height: 30px;
+    float: none;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.core-div > .center > .left-nav > ul > li:not(:first-child):hover{
+    background-color: #EDEDED;
+    cursor: pointer;
+}
+.core-div > .center > .area-div{
+    border-left: 0px;
+    /*height: 500px;*/
+    width: 937px;
+    float: right;
+}
+.preview{
+    width: 100%;
+    background-color: #656565;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3000;
+}
+#preview > .modal-dialog{
+    width: 1190px;
+    margin: 30px auto;
+    background-color: #FFFFFF;
+
+}
+#preview > .modal-dialog img{
+    max-width: 1190px;
+}
+
+#myCommodities,#addCommodity{
+    height: 86%;
+    width: 92%;
+    background-color: #FFFFFF;
+    margin: 4%;
+}
+#myCommodities > ul > li{
+    display: block;
+    width: calc(100% - 62px);
+    height: 78px;
+    border: 1px solid #cccccc;
+    padding: 10px 30px;
+}
+#myCommodities > ul > li:not(:first-child){
+    border-top: 0px;
+}
+#myCommodities > ul > li >:first-child > img{
+    width: 78px;
+    height: 78px;
+}
+#myCommodities > ul > li >:nth-child(2){
+    width: 300px;
+    margin-left: 10px;
+    height: 58px;
+    text-align: left;
+    overflow: hidden;
+}
+#myCommodities > ul > li >:nth-child(2) > a{
+    line-height: 58px;
+}
+#myCommodities > ul > li >:nth-child(3){
+    height: 78px;
+    line-height: 78px;
+    float: right;
+}
+
+#myCommodities > ul > li > div{
+    float: left;
+}
+
+#addCommodity > form > div{
+    display: inline-block;
+}
+#addCommodity >:last-child{
+    margin-top: 10px;
+    float: right;
+}

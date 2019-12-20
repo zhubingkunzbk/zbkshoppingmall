@@ -10,11 +10,12 @@ public class Commodity {
     private String title;
     private Integer classificationId;
     private String userAccountNumber;
+    private String showImgSrc;
 
     public Commodity() {
     }
 
-    public Commodity(Integer id, String content, Double price, Integer stock, Integer salesVolume, String describe, String title, Integer classificationId, String userAccountNumber) {
+    public Commodity(Integer id, String content, Double price, Integer stock, Integer salesVolume, String describe, String title, Integer classificationId, String userAccountNumber,String showImgSrc) {
         this.id = id;
         this.content = content;
         this.price = price;
@@ -24,6 +25,15 @@ public class Commodity {
         this.title = title;
         this.classificationId = classificationId;
         this.userAccountNumber = userAccountNumber;
+        this.showImgSrc = showImgSrc;
+    }
+
+    public void setShowImgSrc(String showImgSrc) {
+        this.showImgSrc = showImgSrc;
+    }
+
+    public String getShowImgSrc() {
+        return showImgSrc;
     }
 
     public void setId(Integer id) {

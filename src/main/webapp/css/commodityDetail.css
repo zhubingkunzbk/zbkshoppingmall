@@ -1,0 +1,110 @@
+body{
+    background-color: #FFFFFF;
+}
+.core-div{
+    border-top: 30px solid #2BACA9;
+}
+.core-div > .center > .commodity-describe{
+    padding-top: 30px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.core-div > .center > .commodity-describe > .left{
+    float: left;
+}
+.core-div > .center > .commodity-describe > .left > div > img{
+    width: 400px;
+    height: 400px;
+}
+.core-div > .center > .commodity-describe > .right{
+    width: 759px;
+    float: right;
+    margin-left: 30px;
+}
+.core-div > .center > .commodity-describe > .right > .price{
+    padding-top: 50px;
+}
+.core-div > .center > .commodity-describe > .right > .price>:nth-child(1){
+    line-height: 40px;
+    font-size: 20px;
+}
+.core-div > .center > .commodity-describe > .right > .price>:nth-child(2){
+    color: #2BACA9;
+    font-size: 35px;
+    line-height: 40px;
+}
+.core-div > .center > .commodity-describe > .right > .sale-info{
+    width: 80%;
+    margin-top: 20px;
+    border-top: 1px dotted #dddddd;
+    border-bottom: 1px dotted #dddddd;
+}
+.core-div > .center > .commodity-describe > .right > .sale-info > p{
+    line-height: 40px;
+    margin: 0px;
+}
+.core-div > .center > .commodity-describe > .right > .operate-number{
+    height: 34px;
+    margin-top: 10px;
+}
+.core-div > .center > .commodity-describe > .right > .operate-number > input[type="text"]{
+    width: 40px;
+    height: 30px;
+    float: left;
+}
+.core-div > .center > .commodity-describe > .right > .operate-number > div{
+    margin-left: 5px;
+    float: left;
+}
+.core-div > .center > .commodity-describe > .right > .operate-number > div > input[type="button"]{
+    width: 13px;
+    height: 13px;
+    font-size: 5px;
+    line-height: 10px;
+    display: block;
+    background-color: #FFFFFF;
+    border: 1px solid #aaaaaa;
+}
+.core-div > .center > .commodity-describe > .right > .operate-number > div > input[type="button"]:last-child{
+    margin-top: 4px;
+}
+.core-div > .center > .commodity-describe > .right > .operate-number > span{
+    display: inline-block;
+    padding-left: 10px;
+    height: 34px;
+    line-height: 34px;
+}
+.core-div > .center > .commodity-describe > .right > .operate-shopping{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#buy{
+    background-color: #EDEDED;
+    border: 1px solid #2BACA9;
+    color: #2BACA9;
+    height: 40px;
+    width: 160px;
+}
+#add-shopping-cart{
+    margin-left: 30px;
+    background-color: #2BACA9;
+    border: 1px solid #2BACA9;
+    color: #EDEDED;
+    height: 40px;
+    width: 160px;
+}
+.core-div > .center > .commodity-content{
+    margin-top: 20px;
+    border: 1px solid #dddddd;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+.core-div > .center > .commodity-content *{
+    max-width: 1150px;
+}
+.core-div > .center > .commodity-content img {
+    width: 1150px;
+}
+footer{
+    margin-top: 30px;
+}

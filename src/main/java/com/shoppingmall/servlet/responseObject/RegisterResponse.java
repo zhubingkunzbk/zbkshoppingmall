@@ -5,7 +5,8 @@ import com.shoppingmall.common.response.ResponseObject;
 public enum RegisterResponse implements ResponseObject {
     REGISTER_SUCCESS(0,"注册成功"),
     ACCOUNT_NUMBER_EXIST(1,"账号已存在"),
-    ANOTHER_ERROR(2,"未知错误");
+    ANOTHER_ERROR(2,"未知错误"),
+    IDENTIFYING_CODE_ERROR(3,"验证码错误");
     private int code;
     private String msg;
     RegisterResponse(int code, String msg) {

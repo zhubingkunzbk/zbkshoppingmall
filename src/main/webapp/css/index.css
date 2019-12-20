@@ -1,0 +1,406 @@
+
+.mid-div > .carousel{
+    height: 500px;
+    position: relative;
+}
+.mid-div > .carousel > *{
+    position: absolute;
+    top: 0;
+}
+.mid-div > .carousel > button{
+    background-color: #ccc;
+    width: 50px;
+    height: 100px;
+    opacity: 0.1;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    top: 200px;
+    z-index: 99;
+}
+.mid-div > .carousel > :first-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.mid-div > .carousel > :last-child{
+    right: 0;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.mid-div > .carousel > button:hover{
+    opacity: 0.4;
+}
+.mid-div > .carousel > .bottom-circle{
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 475px;
+}
+.mid-div > .carousel > .bottom-circle > button{
+    width: 30px;
+    height: 5px;
+    border-radius: 10px;
+    opacity: 0.5;
+    margin: 0 5px;
+}
+.mid-div > .carousel > .bottom-circle > .now-carousel-circle{
+    width: 37px;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #2BACA9;
+}
+
+.core-div{
+	background: linear-gradient(to right, #69DAD7 , #2BACA9);
+}
+.core-div > .center{
+    height: 30px;
+    margin: 0 auto;
+    /*position: relative;
+    top: -30px;*/
+}
+.core-div > .center > ul > :first-child{
+    /*position: relative;
+    z-index: 999;*/
+    width: 20%;
+    border: 1px solid #2BACA9;
+    border-top: 0;
+}
+.core-div > .center > ul > :nth-child(2){
+    /*position: relative;
+    z-index: 999;*/
+    width: 79.8%;
+    background-color: #fff;
+    height: auto;
+}
+.core-div .classification-div{
+	position: relative;
+	top: 0px;
+    background-color: #fff;
+}
+.core-div .classification-div > ul > li{
+    float: none;
+    height: 30px;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 15px;
+}
+.core-div .classification-div > ul > li > .classification-detail{
+    position: absolute;
+    top: 29px;
+    left: 238px;
+    width: 660px;
+    height: 484px;
+    border: 1px solid #2BACA9;
+    background-color: #fff;
+    display: none;
+}
+.core-div .classification-div > ul > li > .classification-detail > div{
+    width: 620px;
+    height: 122px;
+    padding: 20px;
+    overflow: hidden;
+}
+.core-div .classification-div > ul > li > .classification-detail > div > a{
+    margin-right: 5px;
+}
+
+.core-div .classification-div > ul > li > .classification-detail > div p>:nth-child(1){
+    font-weight: bold;
+    font-size: 20px;
+}
+.core-div .classification-div > ul > li > .classification-detail > div p>:nth-child(2){
+    float: right;
+}
+.core-div .classification-div > ul > li:not(.title):hover > .classification-detail{
+    display: block;
+}
+.core-div .classification-div > ul > li i{
+    margin-left: 0;
+    float: right;
+    margin-right: 20px;
+}
+.core-div .classification-div > ul > li > a{
+    font-size: 16px;
+}
+.core-div .classification-div > ul > li:not(.title):hover{
+    background-color: #AFEEEE;
+    color: #2BACA9;
+}
+.core-div .classification-div > ul > .title{
+    background-color: #2BACA9;
+    text-align: center;
+    padding-left: 0;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.core-div > .center > ul > li > .nav{
+	background: linear-gradient(to right, #69DAD7 , #2BACA9);
+}
+
+.core-div > .center > ul > li > .nav > ul > li{
+	width: calc(100% / 8);
+	height: 30px;
+}
+.core-div > .center > ul > li > .nav > ul > li:hover{
+	border-radius: 20px;
+	background-color: #2BACA9;
+}
+.core-div > .center > ul > li > .nav > ul > li > a{
+	display: inline-block;
+	line-height: 30px;
+	width: 100%;
+	height: 30px;
+}
+.core-div > .center > ul > li > .nav > ul > li > a:hover{
+	color: #fff;
+}
+.core-div > .center > ul > :nth-child(2) > div{
+	width: 100%;
+	height:500px;
+	background-color: #f4f4f4;
+	/*background: linear-gradient(to right, #69DAD7 , #2BACA9);*/
+}
+.core-div > .center > ul > :nth-child(2) > div > .left{
+    width: 67.86%;
+    height: 475px;
+    margin: 10px;
+    /*background-color: #666;*/
+    float: left;
+}
+.core-div > .center > ul > :nth-child(2) > div > .right{
+    height: 485px;
+    width: 30%;
+    background-color: #fff;
+    float: right;
+}
+.core-div > .center > ul > :nth-child(2) > div > .right > .user-info{
+    height: 180px;
+    width: 100%;
+    /*background-color: #fa0;*/
+    /*float: right;*/
+}
+.core-div > .center > ul > :nth-child(2) > div > .right > .user-info > .portrait{
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+}
+.core-div > .center > ul > :nth-child(2) > div > .right > .user-info > .user-name{
+    margin-bottom: 20px;
+}
+.core-div > .center > ul > :nth-child(2) > div > .right > :nth-child(2){
+    background-color: #AFEEEE;
+    height: 25px;
+}
+.core-div > .center > ul > :nth-child(2) > div > .right > :nth-child(2) > a{
+    color: #2BACA9;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 25px;
+}
+.core-div > .center > ul > :nth-child(2) > div > .right > .other-information > .other-information-nav{
+    margin-top: 10px;
+}
+.core-div > .center > ul > :nth-child(2) > div > .right > .other-information > .other-information-nav > span{
+    margin: 0 5px;
+    display: inline-block;
+    height: 20px;
+    cursor: pointer;
+}
+.core-div > .center > ul > :nth-child(2) > div > .right > .other-information > .other-information-title{
+    width: 97%;
+    margin: 10px auto 0px auto;
+    overflow: hidden;
+}
+.core-div > .center > ul > :nth-child(2) > div > .right > .other-information > .other-information-nav > .select{
+    border-bottom: 2px solid #2BACA9;
+    font-weight: bold;
+}
+
+.core-div > .center > ul > :nth-child(2) > div > .left >.top-commodity-image-div > .top-commodity-image{
+    width: calc(100%/4 - 2px);
+    height: calc(100%/3 - 2px);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    float: left;
+}
+.core-div > .center > ul > :nth-child(2) > div > .left > .top-commodity-image-div > .top-commodity-image > img{
+    width: 80%;
+    height: 60%;
+    margin-top: 20px;
+    vertical-align: unset;
+}
+.core-div > .center > ul > :nth-child(2) > div > .left > .top-commodity{
+    width: 100%;
+    height: 193px;
+    background-color: #fff;
+    margin-top: 10px;
+    float: left;
+}
+.core-div > .center > ul > :nth-child(2) > div > .left > .top-commodity > div{
+    float: left;
+    width: 47%;
+    height: 90%;
+    margin: 9px 9px;
+}
+.core-div > .center > ul > :nth-child(2) > div > .left > .top-commodity > div > img{
+    width: 100%;
+    height: 100%;
+}
+
+.core-div > .center > .bottom{
+    background-color: #f4f4f4;
+    height: 680px;
+    width: 100%;
+}
+.core-div > .center > .bottom > .bottom-top{
+    width: 100%;
+    height: 650px;
+}
+.core-div > .center > .bottom > .bottom-top .title{
+    margin: 20px 20px 20px 20px;
+    height: 30px;
+}
+.core-div > .center > .bottom > .bottom-top .title > div{
+    height: 100%;
+    width: 93px;
+    display: inline-block;
+    vertical-align: top;
+}
+.core-div > .center > .bottom > .bottom-top .title > span{
+    position: relative;
+    top: 13px;
+    color: #aaa;
+    -moz-user-select:none; /*火狐*/
+    -webkit-user-select:none; /*webkit浏览器*/
+    -ms-user-select:none; /*IE10*/
+    -khtml-user-select:none; /*早期浏览器*/
+    user-select:none;
+}
+.core-div > .center > .bottom > .bottom-top .content{
+    margin: 0 20px;
+}
+
+
+.core-div > .center > .bottom > .bottom-top .content > .commodity{
+    width: calc(100%/3 - 5px);
+    float: left;
+    margin: 0px 5px 20px 0px;
+    cursor: pointer;
+}
+.core-div > .center > .bottom > .bottom-top .content > .commodity>:nth-child(1){
+    width: 100%;
+    height: 180px;
+}
+.core-div > .center > .bottom > .bottom-top .content > .commodity>:nth-child(1)>div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -185px;
+    left: 0;
+    background-color: #ccc;
+    z-index: 999;
+    opacity: 0.3;
+    display: none;
+}
+.core-div > .center > .bottom > .bottom-top .content > .commodity > .commodity-title{
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 5px 0px 5px 5px;
+}
+.core-div > .center > .bottom > .bottom-top > .right > .content > .commodity > .commodity-title:before{
+    content: '';
+    position: relative;
+    display: inline-block;
+    background: url("./image/commodity-title-icon.png");
+    top: 0px;
+    width: 20px;
+    height: 20px;
+}
+.core-div > .center > .bottom > .bottom-top .content > .commodity > .description{
+    color: #aaa;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 5px;
+}
+.core-div > .center > .bottom > .bottom-top .content > .commodity > .fabulous{
+    color: deepskyblue;
+    margin-left: 5px;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+.core-div > .center > .bottom  img{
+    height: 100%;
+    width: 100%;
+}
+.core-div > .center > .bottom > .bottom-top > .left{
+    width: 49.5%;
+    height: 100%;
+    float: left;
+    background-color: #fff;
+}
+.core-div > .center > .bottom > .bottom-top > .right{
+    width: 49.5%;
+    height: 100%;
+    float: right;
+    background-color: #fff;
+}
+
+
+
+
+#loginModal,#registerModal{
+    padding-right: 0px !important;
+}
+#loginModal > .modal-dialog,#registerModal > .modal-dialog{
+    margin: 200px auto;
+}
+#loginModal > div > div > div.modal-body > form > div > span,#registerModal > div > div > div.modal-body > form > div > span{
+    font-size: 20px !important;
+}
+#loginModal > div > div > div.modal-body > form > div,#registerModal > div > div > div.modal-body > form > div{
+    margin: 10px auto;
+    width: 300px;
+}
+#loginModal > div > div > div.modal-footer > button,#registerModal > div > div > div.modal-footer > button{
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+}
+#registerModal > div > div > div.modal-body > form > div > span{
+    margin: 10px 20px;
+    font-size: 10px;
+    color: #999;
+}
+#loginMessage,#registerMessage{
+    text-align: center;
+    margin-top: 10px !important;
+}
+#loginMessage > span,#registerMessage > span{
+    display: inline-block;
+    color: #ff5d54 !important;
+    height: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px auto;
+}
+#identifyingCode > div{
+    vertical-align: top;
+    width: 120px !important;
+    height: 50px;
+    margin-left: 40px;
+    display: inline-block;
+    cursor: pointer;
+}
+#identifyingCode > input{
+    vertical-align: top;
+    width: 100px !important;
+    height: 36px;
+    display: inline-block;
+}
